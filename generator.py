@@ -27,7 +27,7 @@ distribution_choice = input("Which distribution would you like to choose to gene
 while (distribution_choice != 1 and distribution_choice != 2):
 	print ""
 	print "Please enter a valid choice."
-	distribution_choice = input("Which distribution would you like to choose to generate the random numbers?" 
+	distribution_choice = input("Which distribution would you like to choose to generate the random numbers?" +
 		" Enter 1 for uniform and 2 for exponential distribution. : ")
 
 print ""
