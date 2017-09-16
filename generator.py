@@ -25,8 +25,8 @@ def uniform_additive():
 	j = 1
 	#seed the random number value at 1
 	currval = float(1)
-	dp = [0 for _ in range(10003)]
-	for i in range(10003):
+	dp = [0 for _ in range(10000 + k)]
+	for i in range(10000 + k):
 		if i < 3:
 			dp[i] = currval
 		else:
@@ -35,7 +35,7 @@ def uniform_additive():
 	iterations = 10000
 	outputFile = open("Shah_Devendra_uniform_additive.csv", "wb")
 	while i < iterations:
-		outputFile.write(str(dp[i+3]/m) + "\n")
+		outputFile.write(str(dp[i+k]/m) + "\n")
 		i += 1
 	outputFile.close()
 	print"10000 random numbers generated and stored in Shah_Devendra_uniform_additive.csv."
@@ -90,8 +90,8 @@ def exponential_additive():
 	lmbd = float(1)
 	#seed the random number value at 1
 	currval = float(1)
-	dp = [0 for _ in range(10003)]
-	for i in range(10003):
+	dp = [0 for _ in range(10000+k)]
+	for i in range(10000 + k):
 		if i < 3:
 			dp[i] = currval
 		else:
@@ -100,7 +100,7 @@ def exponential_additive():
 	iterations = 10000
 	outputFile = open("Shah_Devendra_exponential_additive.csv", "wb")
 	while i < iterations:
-		outputFile.write(str(uniform_to_exponential(dp[i+3]/m, lmbd)) + "\n")
+		outputFile.write(str(uniform_to_exponential(dp[i+k]/m, lmbd)) + "\n")
 		i += 1
 	outputFile.close()
 	print"10000 random numbers generated and stored in Shah_Devendra_exponential_additive.csv."
