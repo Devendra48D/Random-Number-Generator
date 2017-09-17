@@ -22,7 +22,7 @@ def uniform_additive(iterations):
 	m = float(2 ** 32)
 	j = 24
 	k = 55
-	#seed the random number value at 1
+	#seed the random number values
 	currvalodd = float(2 ** 30 - 1)
 	currvaleven = float(2 ** 30)
 	dp = [0 for _ in range(iterations + k + 1500)]
@@ -112,7 +112,7 @@ def exponential_additive(iterations):
 	m = float(2 ** 32)
 	j = 24
 	k = 55
-	#seed the random number value at 1
+	#seed the random number values
 	currvalodd = float(2 ** 30 - 1)
 	currvaleven = float(2 ** 30)
 	dp = [0 for _ in range(iterations + k + 1500)]
