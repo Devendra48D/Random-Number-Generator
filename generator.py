@@ -17,7 +17,7 @@ def uniform_LCG(iterations):
 	outputFile.close()
 	print str(iterations) + " random numbers generated and stored in Shah_Devendra_uniform_LCG.csv."
 
-#Using the formula 
+#Using the formula X(n) = (X(n-24) + X(n-55)) mod m
 def uniform_additive(iterations):
 	m = float(2 ** 32)
 	j = 24
@@ -25,6 +25,7 @@ def uniform_additive(iterations):
 	#seed the random number values
 	currvalodd = float(2 ** 30 - 1)
 	currvaleven = float(2 ** 30)
+	#perform 1500 rough iterations first and then start storing random values
 	dp = [0 for _ in range(iterations + k + 1500)]
 	for i in range(iterations + k + 1500):
 		if i < k:
@@ -115,6 +116,7 @@ def exponential_additive(iterations):
 	#seed the random number values
 	currvalodd = float(2 ** 30 - 1)
 	currvaleven = float(2 ** 30)
+	#perform 1500 rough iterations first and then start storing random values
 	dp = [0 for _ in range(iterations + k + 1500)]
 	for i in range(iterations + k + 1500):
 		if i < k:
